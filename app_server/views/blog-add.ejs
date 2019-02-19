@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <% include ./partials/nav %>
+        <div class="card" style="width: 50%">
+	<p>&nbsp;</p>  
+        <form method="post" action="/blog-add/" style="padding: 20px">
+            <div class="form-group">
+                <label for="summary" class="text-primary">Blog Title</label>
+                <input class="form-control" id="summary" name="blogText"></textarea>
+
+                <label for="detail" class="text-primary">Blog Text</label>
+                <textarea class="form-control" id="detail" rows="3" name="blogTitle"></textarea>
+            </div>
+                <input type="submit" class="btn btn-primary" value="Add Blog">
+        </form>
+        </div>
+    </div> <!-- container -->
+  </body>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</html>
