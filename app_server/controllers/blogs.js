@@ -96,10 +96,8 @@ var renderEditPage = function(req, res, responseBody){
     res.render('blog-edit', {
         title: 'Blog Edit',
 	pageHeader: {
-            title: 'Blog Edit',
-            strapline: ''
+            title: 'Blog Edit'
 	},
-	sidebar: 'empty',
 	blog: responseBody
     });
 };
@@ -158,29 +156,22 @@ var renderDeletePage = function(req, res, responseBody){
     res.render('blog-delete', {
 	title: 'Blog Delete',
 	pageHeader: {
-            title: 'Blog Delete',
-            strapline: ''
+            title: 'Blog Delete'
 	},
-        sidebar: 'empty',
 	blog: responseBody
     });
 };
 
 /* Blog Delete Post */
 module.exports.deletePost = function(req, res){
-    var requestOptions, path, postdata;
+    var requestOptions, path;
     var id = req.params.id;
     path = '/api/blogs/' + id;
-
-    postdata = {
-        blogTitle: req.body.blogTitle,
-        blogText: req.body.blogText
-    };
 
     requestOptions = {
 	url : apiOptions.server + path,
         method : "DELETE",
-        json : postdata
+        json : {}
     };
 
     request(

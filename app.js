@@ -10,8 +10,8 @@ var routesApi = require('./app_api/routes/index');
 
 var app = express();
 
-// sets port 8080 to default or unless otherwise specified in the environment
-app.set('port', process.env.PORT || 8080);
+// sets port 80 to default unless otherwise specified in the environment
+app.set('port', process.env.PORT || 80);
 
 // view engine setup
 app.set('views', path.join(__dirname, './app_server/views'));
