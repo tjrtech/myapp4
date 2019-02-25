@@ -9,6 +9,7 @@ var routes = require('./app_server/routes/index');
 var routesApi = require('./app_api/routes/index');
 
 var app = express();
+app.locals.moment = require('moment');
 
 // sets port 80 to default unless otherwise specified in the environment
 app.set('port', process.env.PORT || 80);

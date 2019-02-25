@@ -1,7 +1,7 @@
 /* Blogs Controller Collection */
 var request = require('request');
 var apiOptions = {
-    server : "http://localhost:3000"
+    server : "http://localhost"
 };
 
 
@@ -29,10 +29,8 @@ var renderListPage = function(req, res, responseBody){
     res.render('blog-list', {
 	title: 'Blog List',
 	pageHeader: {
-	    title: 'Blog List',
-	    strapline: ''
+	    title: 'Blog List'
 	},
-	sidebar: 'empty',
 	blogs: responseBody
     });
 };
