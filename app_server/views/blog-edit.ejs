@@ -6,15 +6,16 @@
   </head>
   <body>
     <div class="container">
-        <% include ./partials/nav %>
-        <div class="card" style="width: 50%">
+      <% include ./partials/nav %>
+        <p></p>
+        <div class="card border-primary" style="width: 50%">
         <form method="post" action="/blog-edit/<%=blog._id%>" style="padding: 20px">
             <div class="form-group">
                 <label for="summary" class="text-primary">Blog Title</label>
-                <input class="form-control" id="blogTitle" name="blogTitle" value="<%=blog.blogTitle%>"></textarea>
+                <input class="form-control" id="blogTitle" name="blogTitle" value="<%=blog.blogTitle%>">
 
                 <label for="detail" class="text-primary">Blog Text</label>
-                <input class="form-control" id="blogText" name="blogText" value="<%=blog.blogText%>"></textarea>
+                <textarea class="form-control" id="blogText" name="blogText"><%=blog.blogText%></textarea>
             </div>
                 <input type="submit" class="btn btn-primary" value="Save Blog">
         </form>
